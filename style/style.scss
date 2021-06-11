@@ -1,7 +1,14 @@
+// :root {
+//     font-size: 62.5%;
+// }
+
 body{
     margin: 0;
     padding: 0;
 }
+
+$gray-bg : #F5F5F7;
+$berder-green-color: #89DD65;
 
 @mixin header-main-element {
     font-family: Segoe UI;
@@ -21,4 +28,60 @@ body{
     line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+@mixin content-container {
+    margin-right: 18.75%;
+    margin-left: 18.75%;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: $gray-bg;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8rem;
+    background-color: $gray-bg;
+    @include content-container();
+}
+
+.mode-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.normal {
+    @include header-main-element();
+}
+
+.advanded {
+    @include header-main-element();
+
+}
+
+.expert {
+    @include header-main-element();
+
+}
+
+.function-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-language {
+
+}
+
+.sun {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(/img/sun.svg) no-repeat;
+    cursor: pointer;
 }
