@@ -351,6 +351,29 @@ body {
   background: url(../img/keyboard.jpg);
 }
 
+.main_qualified-support_container .img-slider .slider {
+  position: relative;
+  width: 13.1rem;
+  height: 6rem;
+  background-color: #89DD65;
+  top: 43.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_qualified-support_container .img-slider .slider .arrow_left {
+  background: url(../img/arrow_drop_down.svg);
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 .main_for-container {
   background-color: #F5F5F7;
   width: 100%;
@@ -378,6 +401,8 @@ body {
           align-items: center;
   width: 120rem;
   height: 40rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main_for-container .for-items-container .for_item {
@@ -416,7 +441,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 32.5rem;
-  height: 27.5rem;
+  height: 30.5rem;
 }
 
 .main_for-container .for-items-container .for_item .img {
@@ -454,5 +479,382 @@ body {
   line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.main_pamm-service {
+  width: 100%;
+  height: 82.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_pamm-service .pamm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120rem;
+  height: 58.8rem;
+}
+
+.main_pamm-service .pamm-container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: col;
+          flex-direction: col;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main_pamm-service .pamm-container .title {
+  font-family: Segoe UI;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 42rem;
+}
+
+.main_pamm-service .pamm-container .subtitle {
+  font-family: Segoe UI;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 79rem;
+}
+
+.main_pamm-service .pamm-container .tableArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10.9rem;
+  width: 100%;
+  height: 32.6rem;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table {
+  width: 60rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .title-container .title_question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3.2rem;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .title-container .title_question .title {
+  font-family: Segoe UI;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .title-container .title_question .questionMark {
+  background: url(../img/question_Icon.png) no-repeat;
+  width: 3rem;
+  height: 2rem;
+  margin-left: .7rem;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .title-container .see_all {
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #828282;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table {
+  width: 58.5rem;
+  height: 27.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table_titles {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 15%;
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #828282;
+  border: 1.5px solid #E0E0E0;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table_row {
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1.5px solid #E0E0E0;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element {
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #121212;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element_active {
+  text-decoration: underline;
+}
+
+.main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element_graph {
+  background: url(../img/graph.png);
+  width: 14rem;
+  height: 4rem;
+}
+
+.footer {
+  width: 100%;
+  background-color: #F5F5F7;
+  height: 32rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer_container {
+  height: 14.5rem;
+  width: 120rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_container .logo-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.footer_container .logo-info .main-logo {
+  background: url(../img/main_logo.svg) no-repeat;
+  background-size: 75%;
+  width: 100%;
+  height: 100%;
+}
+
+.footer_container .logo-info .info {
+  font-family: Segoe UI;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 22.4rem;
+  height: 6.5rem;
+}
+
+.footer_container .bold_item {
+  font-family: Segoe UI;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer_container .usual_item {
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer_container .rmf {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_container .ttt {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_container .arc {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_container .hhpp {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

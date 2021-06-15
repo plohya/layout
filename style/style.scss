@@ -8,6 +8,8 @@ body {
 
 $grey-bg: #F5F5F7;
 $light-green-main: #89DD65;
+$grey-font: #828282;
+$black-font: #121212;
 
 @mixin SegoeUI {
     font-family: Segoe UI;
@@ -67,6 +69,90 @@ $light-green-main: #89DD65;
     line-height: 40px;
     letter-spacing: 0em;
     text-align: center;
+}
+
+@mixin pamm-service-title {
+    font-family: Segoe UI;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin company-info {
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin bold_item {
+    font-family: Segoe UI;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin usual_item {
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin table_title {
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+@mixin table_titles {
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $grey-font;
+}
+
+@mixin table_element {
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $black-font;
+}
+
+@mixin see_all {
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    text-decoration-line: underline;
+    color: $grey-font;
 }
 
 body {
@@ -290,7 +376,29 @@ body {
             background: url(../img/keyboard.jpg);
         
             .slider {
-                // position: relative;
+                position: relative;
+                width: 13.1rem;
+                height: 6rem;
+                background-color: $light-green-main;
+                top: 43.5rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .arrow_left {
+                    background: url(../img/arrow_drop_down.svg);
+                    position: relative;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+
+                .counter {
+
+                }
+
+                .arrow_right {
+                    
+                }
             }
         }
         
@@ -303,12 +411,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
         .for-items-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 120rem;
             height: 40rem;
+            flex-wrap: wrap;
             
 
             .for_item {
@@ -327,7 +437,7 @@ body {
                     justify-content: space-between;
                     align-items: flex-start;
                     max-width: 32.5rem;
-                    height: 27.5rem;
+                    height: 30.5rem;
                 }
 
                 .img {
@@ -358,6 +468,212 @@ body {
         }
     }
 
+    &_pamm-service {
+    width: 100%;
+    height: 82.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+        .pamm-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 120rem;
+            height: 58.8rem;
 
+            .text {
+                display: flex;
+                flex-direction: col;
+                align-items: flex-start;
+            }
+            
+            .title {
+                @include pamm-service-title();
+                width: 42rem;
+            }
+
+            .subtitle {
+                @include subtitleSupport();
+                width: 79rem;
+            }
+
+            .tableArea {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10.9rem;
+                width: 100%;
+                height: 32.6rem;
+
+                &_masters-table {
+                    width: 60rem;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .title-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 20%;
+
+                        .title_question {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-left: 3.2rem;
+                            
+                            .title {
+                                @include table_title();
+                                width: 100%;
+                            }
+                            
+                            .questionMark {
+                                background: url(../img/question_Icon.png) no-repeat;
+                                width: 3rem;
+                                height: 2rem;
+                                margin-left: .7rem;
+                            }
+                        }
+                        
+                        .see_all {
+                            @include see_all();
+                        }
+                    }
+
+                    .table {
+                        width: 58.5rem;
+                        height: 27.7rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        &_titles {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            flex-direction: row;
+                            height: 15%;
+                            @include table_titles();
+                            border: 1.5px solid #E0E0E0;
+
+                            .title_item {
+
+                            }
+                        }
+
+                        &_row {
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border: 1.5px solid #E0E0E0;
+
+                            .row_element {
+                                @include table_element();
+                                
+                                &_active {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            .row_element_graph {
+                                background: url(../img/graph.png);
+                                // width: 24%;
+                                width: 14rem;
+                                height: 4rem;
+                            }
+                        }
+                    }
+
+                }
+
+                .followers-table {
+
+                }
+            }
+        }
+    }    
+}
+
+.footer {
+    width: 100%;
+    background-color: $grey-bg;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_container {
+        height: 14.5rem;
+        width: 120rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .logo-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 100%;
+
+            .main-logo {
+                background: url(../img/main_logo.svg) no-repeat;
+                background-size: 75%;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .info {
+                @include company-info();
+                width: 22.4rem;
+                height: 6.5rem;
+            }
+        }
+
+            .bold_item {
+                @include bold_item();
+            }
+
+            .usual_item {
+                @include usual_item();
+            }
+
+            .rmf {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .ttt {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .arc {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .hhpp {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        
+    }
 }
