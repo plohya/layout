@@ -1,90 +1,107 @@
+:root {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.wrapper {
+.header {
   width: 100%;
-  background-color: #F5F5F7;
+  height: 9rem;
 }
-
-.top-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header .upper-header {
+  background-color: #F5F5F7;
+  width: 100%;
+}
+.header_top_container {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 120rem;
   height: 3.8rem;
-  background-color: #F5F5F7;
-  margin-right: 18.75%;
-  margin-left: 18.75%;
 }
-
-.mode-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header_top_container_mode-container {
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
+  align-items: center;
 }
-
-.normal {
+.header_top_container .mode_item {
   font-family: Segoe UI;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
+  font-weight: 300;
+  line-height: 25px;
   letter-spacing: 0em;
-  text-align: right;
+  text-align: left;
+  margin-right: 4rem;
 }
-
-.advanded {
-  font-family: Segoe UI;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: right;
-}
-
-.expert {
-  font-family: Segoe UI;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: right;
-}
-
-.function-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header_top_container_login-language-container {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 19.8rem;
+  margin: 0 auto;
+  max-width: 120rem;
 }
-
-.sun {
+.header_top_container .login_item {
+  font-family: Segoe UI;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-weight: 600;
+  color: #89DD65;
+}
+.header_top_container .login_item::after {
+  content: "|";
+  position: absolute;
+  width: 0.4rem;
+  height: 5rem;
+  margin-left: 1.5rem;
+}
+.header_top_container .language_change {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.header_top_container .arrow_btn {
+  display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url(/img/sun.svg) no-repeat;
-  cursor: pointer;
+  background: url(../img/arrow_drop_down.svg);
 }
-/*# sourceMappingURL=style.css.map */
+.header_top_container .language_item {
+  font-family: Segoe UI;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.header_top_container .theme_button {
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../img/sun.svg);
+}
+.header .lower-header {
+  width: 100%;
+}
+.header_low_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.header_low_container_main_logo {
+  background: url(../img/main_logo.svg);
+  width: 15.176rem;
+  height: 2.7rem;
+}

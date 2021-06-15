@@ -1,26 +1,11 @@
-// :root {
-//     font-size: 62.5%;
-// }
-
-body{
-    margin: 0;
-    padding: 0;
+:root {
+    font-size: 10px;
 }
 
-$gray-bg : #F5F5F7;
-$berder-green-color: #89DD65;
+$grey-bg: #F5F5F7;
+$light-green-main: #89DD65;
 
-@mixin header-main-element {
-    font-family: Segoe UI;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: right;
-}
-
-@mixin header-element-head {
+@mixin SegoeUI {
     font-family: Segoe UI;
     font-size: 15px;
     font-style: normal;
@@ -30,58 +15,112 @@ $berder-green-color: #89DD65;
     text-align: left;
 }
 
-@mixin content-container {
-    margin-right: 18.75%;
-    margin-left: 18.75%;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.wrapper {
+.header {
     width: 100%;
-    background-color: $gray-bg;
-}
+    height: 9rem;
 
-.top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 3.8rem;
-    background-color: $gray-bg;
-    @include content-container();
-}
+    .upper-header {
+        background-color: $grey-bg;
+        width: 100%;
+    }
 
-.mode-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
+    &_top_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        // background-color: $grey-bg;
+        max-width: 120rem;
+        height: 3.8rem;
+        
+        &_mode-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
-.normal {
-    @include header-main-element();
-}
+        .mode_item {
+            @include SegoeUI();
+            margin-right: 4rem; 
+        }
 
-.advanded {
-    @include header-main-element();
+        &_login-language-container { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 19.8rem;
+            margin: 0 auto;
+            max-width: 120rem;
+        }
 
-}
+        .login_item {
+            @include SegoeUI();
+            font-weight: 600;
+            color: $light-green-main;
 
-.expert {
-    @include header-main-element();
+            &::after {
+                content: '|';
+                position: absolute;
+                width: .4rem;
+                height: 5rem;
+                margin-left: 1.5rem;
+            }
+        }
 
-}
+        .language_change {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        
+        .arrow_btn {
+            display: inline-block;
+            width: 2.4rem;
+            height: 2.4rem;
+            background: url(../img/arrow_drop_down.svg);
+        }
 
-.function-container {
-    display: flex;
-    flex-direction: row;
-}
+        .language_item {
+            @include SegoeUI();
+        }
 
-.login-language {
+        .theme_button {
+            cursor: pointer;
+            width: 2.4rem;
+            height: 2.4rem;
+            background: url(../img/sun.svg);
+        }
+    }
 
-}
+    .lower-header {
+        width: 100%;
+    }
 
-.sun {
-    width: 2.4rem;
-    height: 2.4rem;
-    background: url(/img/sun.svg) no-repeat;
-    cursor: pointer;
+    &_low_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        &_main_logo {
+            background: url(../img/main_logo.svg);
+            width: 15.176rem;
+            height: 2.7rem;
+        }
+
+        &_header_navigation {
+
+        }
+
+        &_container_open_buttons {
+
+        }
+
+    }
 }
