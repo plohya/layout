@@ -687,9 +687,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -697,6 +696,7 @@ body {
 }
 
 .main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element {
+  width: 25%;
   font-family: Segoe UI;
   font-size: 14px;
   font-style: normal;
@@ -711,9 +711,13 @@ body {
   text-decoration: underline;
 }
 
+.main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element:first-child {
+  margin-left: 3.5rem;
+}
+
 .main_pamm-service .pamm-container .tableArea_masters-table .table_row .row_element_graph {
-  background: url(../img/graph.png);
-  width: 14rem;
+  background: url(../img/graph.png) no-repeat;
+  width: 20%;
   height: 4rem;
 }
 
