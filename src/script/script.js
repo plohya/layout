@@ -1,4 +1,4 @@
-import html from '../index.html';
+// import '../index.html';
 import '../style/style.scss';
 
 // variables

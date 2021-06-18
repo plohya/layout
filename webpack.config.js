@@ -5,6 +5,7 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -26,7 +27,12 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`
-        })
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+              { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'app/img') },
+            ],
+          }),
     ],
     module: {
         rules: [
@@ -47,19 +53,20 @@ module.exports = {
                     },
                     'css-loader', 'sass-loader'],
               },
-              {
-                test: /\.(?:|gif|png|jpg|jpeg|svg)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: `./img/${filename('[ext]')}`
-                    }
-                }],
-              },
-              {
-                test: /\.html$/i,
-                use: ['html-loader']
-              },
+            //   {
+            //       test: /\.html$/i,
+            //       use: ['html-loader'],
+            //         },
+                    {
+                      test: /\.(?:|gif|png|jpg|jpeg|svg)$/i,
+                      use: [{
+                          loader: 'file-loader',
+                          options: {
+                              name: `./img/${filename('[ext]')}`,
+                              esModule: false
+                          }
+                      }],
+                    },
         ]
     }
 };
