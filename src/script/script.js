@@ -1,14 +1,17 @@
 // import '../index.html';
-import '../style/style.scss';
+// import '../style/style.scss';
+// import '../style/fonts.scss';
 
 // variables
+
 const $prevSlide = document.querySelectorAll('.arrow_left');
 const $nextSlide = document.querySelectorAll('.arrow_right');
 let slideIndex = 1;
-let theme = 'light';
 const $themeChange = document.querySelector('.theme_button');
+let theme = 'light';
 
 // listeners
+
 $prevSlide.forEach(item => item.addEventListener('click', e => plusSlides(-1)));
 $nextSlide.forEach(item => item.addEventListener('click', e => plusSlides(1)));
 $themeChange.addEventListener('click', e => themeChange(e.target));
@@ -48,17 +51,14 @@ window.onload = () => {
 };
 
 function themeChange(target) {
-    if (theme === 'light') {
+    if (localStorage.theme === 'light') {
         //change to dark  
         document.documentElement.setAttribute('theme', 'dark');
-        console.log('add');
-        theme = 'dark';
         localStorage.setItem('theme', 'dark');
-    } else if (theme === 'dark') {
+    } else if (localStorage.theme === 'dark') {
         // change to light        
         document.documentElement.removeAttribute('theme');
-        console.log('remove');
-        theme = 'light';
         localStorage.removeItem('theme'); // удаляем
+        localStorage.setItem('theme', 'light');
     }
 }
