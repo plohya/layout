@@ -1,3 +1,6 @@
+import html from '../index.html';
+import '../style/style.scss';
+
 // variables
 const $prevSlide = document.querySelectorAll('.arrow_left');
 const $nextSlide = document.querySelectorAll('.arrow_right');

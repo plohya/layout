@@ -18,8 +18,6 @@
     --main-elem: #E0E0E0;
     transition: .5 ease all;
 
-    
-
     .header_top_container  {
 
         .theme_button {
@@ -39,6 +37,10 @@
 
         &_header_navigation .arrow_btn {
             background: url(../img/arrow_drop_down_blackS.svg) no-repeat;
+        }
+
+        .burger-header_menu {
+            background-image: url(../img/burger_green.svg);
         }
 
     }
@@ -364,9 +366,9 @@ body {
 
     .lower-header {
         width: 100%;
-        height: 72%;
-        border-top: .05rem solid var(--slider-bg);
-        border-bottom: .05rem solid var(--slider-bg);
+        height: 70.5%;
+        border-top: .05rem solid #89DD65;
+        border-bottom: .05rem solid #89DD65;
         background-color: var(--main-bg);
         transition: .5s ease all;
     }
