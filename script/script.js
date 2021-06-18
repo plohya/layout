@@ -14,17 +14,10 @@ $themeChange.addEventListener('click', e => themeChange(e.target));
 showSlides(slideIndex);
 
 function plusSlides(n) {
-    console.log('plusSlides');
     showSlides(slideIndex += n);
 }
 
-// function currentSlide(n) {
-//     console.log('currentSlide');
-//     showSlides(slideIndex = n);
-// }
-
 function showSlides(n) {
-    console.log('showSlides');
     let i = 0;
     let $slides = document.getElementsByClassName('img-slider');
 
@@ -39,31 +32,30 @@ function showSlides(n) {
     for (i = 0; i < $slides.length; i++) {
         $slides[i].style.display = 'none';
     }
-    
+
     $slides[slideIndex-1].style.display = 'flex';
 }
 
 // theme change func's
 
+window.onload = () => {
+    if(localStorage.getItem('theme') === 'dark'){
+        document.documentElement.setAttribute('theme', 'dark');
+    }
+};
+
 function themeChange(target) {
-    console.log('switch theme');
     if (theme === 'light') {
         //change to dark  
         document.documentElement.setAttribute('theme', 'dark');
         console.log('add');
         theme = 'dark';
+        localStorage.setItem('theme', 'dark');
     } else if (theme === 'dark') {
         // change to light        
         document.documentElement.removeAttribute('theme');
         console.log('remove');
         theme = 'light';
+        localStorage.removeItem('theme'); // удаляем
     }
-
-    // if(document.documentElement.hasAttribute('theme')){
-    //     document.documentElement.removeAttribute('theme');
-    //     console.log('remove');
-    // } else {
-    //     document.documentElement.setAttribute('theme', 'dark');
-    //     console.log('add');
-    // }
 }
