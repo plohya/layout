@@ -13,8 +13,8 @@ module.exports = {
     entry: '/script/script.js',
     output : {
         filename: `./js/${filename('js')}`,
-        path: path.resolve(__dirname, 'app')
-        // publicPath: ''
+        path: path.resolve(__dirname, 'app'),
+        publicPath: ''
     },
     plugins: [
         new HTMLWebpackPlugin({

@@ -18,67 +18,50 @@
     --main-elem: #E0E0E0;
     transition: .5 ease all;
 
- 
-
     .header_top_container  {
-
         .theme_button {
             background: url(../img/sun_blackS.svg) no-repeat;
         }
-
         .arrow_btn {
             background: url(../img/arrow_drop_down_blackS.svg) no-repeat;
         }
     }
-
     .header_low_container {
-
         &_main_logo {
             background: url(../img/main-logo_blackS.svg) no-repeat;
         }
-
         &_header_navigation .arrow_btn {
             background: url(../img/arrow_drop_down_blackS.svg) no-repeat;
         }
-
         .burger-header_menu {
             background: url(../img/bgreen.svg) no-repeat;
             background-size: 100%;
         }
-
     }
-
     .main_for-container .for-items-container .for_item {
         .img_person {
             background: url(../img/person_blackS.png) no-repeat;
         }
-
         .img_bag {
             background: url(../img/bag_blackS.png) no-repeat;
         }
-
         .img_technology {
             background: url(../img/technology_blackS.png) no-repeat;
         }
     }
-
     .main_pamm-service .tableArea_main-table  {
         .title-container .title_question .questionMark {
             background: url(../img/question_Icon_blackS.png) no-repeat;
         }
-
         .table_row .row_element_graph {
             background: url(../img/graph_blackS.png) no-repeat;
             mix-blend-mode: lighten;
         }
     }
-
     .footer_container .logo-info .main-logo {
         background: url(../img/main-logo_blackS.svg) no-repeat;
     }
 }
-
-
 
     $lime-gradient: linear-gradient(225deg, #89DD65 0%, #AEDD65 100%);
     $grey-font: #828282;
@@ -87,180 +70,128 @@
         display: none;
     }
 
-@mixin loginSegoeUI {
-    font-family: Segoe UI;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #89DD65;
-}
-    
+    a {
+        text-decoration: none;
+    }
 
-@mixin SegoeUI {
+@mixin section-main {
     font-family: Segoe UI;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 300;
-    line-height: 2.5rem;
     letter-spacing: 0em;
     text-align: left;
     color: var(--main-elem);
+}
+
+@mixin loginSegoeUI {
+    @include section-main();
+    line-height: 2.5rem;
+    font-weight: 600;
+    color: #89DD65;
+}
+
+@mixin SegoeUI {
+    @include section-main();
+    font-weight: 300;
+    line-height: 2.5rem;
 }
 
 @mixin SergoUI-lower_header {
-    font-family: Segoe UI;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 3.5rem;
-    letter-spacing: 0em;
+    @include section-main();
     text-align: right;
-    color: var(--main-elem);
+    line-height: 3.5rem;
+    font-weight: 400;
 }
 
 @mixin SergoUI-open_btns {
-    font-family: Segoe UI;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.5rem;
-    letter-spacing: 0em;
+    @include section-main();
     text-align: center;
-    color: var(--main-elem);
+    line-height: 2.5rem;
+    font-weight: 400;
 }
 
 @mixin titleSupport {
-    font-family: Segoe UI;
+    @include section-main();
     font-size: 3rem;
-    font-style: normal;
     font-weight: 700;
-    // line-height: 8rem;
-    letter-spacing: 0em;
-    text-align: left;
     color: var(--black-surface);
 }
 
 @mixin subtitleSupport {
-    font-family: Segoe UI;
-    font-size: 1.7rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 400;
     line-height: 2.7rem;
-    letter-spacing: 0em;
-    text-align: left;
-    color: var(--main-elem);
 }
 
 @mixin fortitle {
-    font-family: Segoe UI;
-    font-size: 2rem;
-    font-style: normal;
+    @include section-main();
+    text-align: center;
     font-weight: 700;
     line-height: 4rem;
-    letter-spacing: 0em;
-    text-align: center;
     color: var(--black-surface);
 }
 
 @mixin pamm-service-title {
-    font-family: Segoe UI;
+    @include section-main();
     font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
     line-height: 4rem;
-    letter-spacing: 0em;
-    text-align: left;
+    font-weight: 700;
     color: var(--black-surface);
 }
 
 @mixin company-info {
-    font-family: Segoe UI;
+    @include section-main();
     font-size: 1rem;
-    font-style: normal;
     font-weight: 300;
     line-height: 1rem;
-    letter-spacing: 0em;
-    text-align: left;
     color: $grey-font;
 }
 
 @mixin bold_item {
-    font-family: Segoe UI;
-    font-size: 1.7rem;
-    font-style: normal;
-    font-weight: 600;
+    @include section-main();
     line-height: 2.3rem;
-    letter-spacing: 0em;
-    text-align: left;
-    color: var(--main-elem);
+    font-weight: 600;
 }
 
 @mixin usual_item {
-    font-family: Segoe UI;
-    font-size: 1.4rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 400;
     line-height: 1.9rem;
-    letter-spacing: 0em;
-    text-align: left;
-    color: var(--main-elem);
 }
 
 @mixin table_title {
-    font-family: Segoe UI;
+    @include section-main();
     font-size: 2rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 2.7rem;
-    letter-spacing: 0px;
-    text-align: left;
-    color: var(--main-elem);
 }
 
 @mixin table_titles {
-    font-family: Segoe UI;
-    font-size: 1.4rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 700;
     line-height: 1.9rem;
-    letter-spacing: 0px;
-    text-align: left;
     color: $grey-font;
 }
 
 @mixin table_element {
-    font-family: Segoe UI;
-    font-size: 1.4rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: var(--main-elem);
 }
 
 @mixin see_all {
-    font-family: Segoe UI;
-    font-size: 1.4rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 600;
     line-height: 2rem;
     letter-spacing: 0.020000000298023224rem;
-    text-align: left;
     text-decoration-line: underline;
     color: $grey-font;
     cursor: pointer;
 }
 
 @mixin counter {
-    font-family: Segoe UI;
-    font-size: 1.6rem;
-    font-style: normal;
+    @include section-main();
     font-weight: 400;
     line-height: 3rem;
-    letter-spacing: 0em;
-    text-align: center;
+    color: #121212;
 }
