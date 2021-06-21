@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack --mode development"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "node-sass": "^6.0.0",
     "sass-loader": "^12.1.0",
     "webpack": "^5.39.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }

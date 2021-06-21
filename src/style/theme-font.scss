@@ -66,6 +66,12 @@
     $lime-gradient: linear-gradient(225deg, #89DD65 0%, #AEDD65 100%);
     $grey-font: #828282;
 
+    body {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+    }
+
     #check-menu {
         display: none;
     }
