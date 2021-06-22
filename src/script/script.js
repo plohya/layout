@@ -65,3 +65,11 @@ function showDropDown(e) {
     }});
         e.target.nextElementSibling.style.display = 'block';
 }
+
+document.getElementById('check-menu').addEventListener('change', function () {
+    if ( this.checked ) {
+        document.querySelector('body').style.overflow = 'hidden';
+    } else {
+        document.querySelector('body').style.overflow = 'scroll';
+    };
+});
